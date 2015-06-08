@@ -1,0 +1,4 @@
+2013-10-09	13:22	Miami	Boots	10	Visa
+2013-10-09	13:22	New York	DVD	1	MasterCard
+2013-10-09 13:22:59 I/O Error^d8x28orz28zoijzu1z1zp1OHH3du3ixwcz114<f1	2	3
+2013-10-09	13:22	Miami	Boots	10	Visa
