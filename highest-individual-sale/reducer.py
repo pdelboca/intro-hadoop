@@ -18,7 +18,7 @@ for line in sys.stdin:
         old_key = this_key
         max_sale = 0
     
-    if max_sale == 0 or float(max_sale) < float(this_sale):
+    if float(max_sale) < float(this_sale):
         old_key = this_key
         max_sale = float(this_sale)
 
