@@ -18,9 +18,9 @@ for line in sys.stdin:
         old_key = this_key
         max_sale = 0
     
-    if max_sale == 0 or max_sale < this_sale:
+    if max_sale == 0 or float(max_sale) < float(this_sale):
         old_key = this_key
-        max_sale = this_sale
+        max_sale = float(this_sale)
 
 # The last category will never enter the if condition
 if old_key != None:
