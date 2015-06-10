@@ -1,9 +1,0 @@
-2013-10-09	13:22	Miami	Boots	1548.23	Visa
-2013-10-09	13:22	New York	DVD	0.25	MasterCard
-2013-10-09 13:22:59 I/O Error^d8x28orz28zoijzu1z1zp1OHH3du3ixwcz114<f1	2	3
-c2013-10-09	13:22	Miami	Boots	236.8	Visa
-2013-10-09	13:22	LA	Book	99.99	Visa
-2013-10-09	13:22	New York	DVD	999.99	MasterCard
-2013-10-09	13:22	New York	DVD	487.0	MasterCard
-2013-10-09	13:22	New York	DVD	102.4	MasterCard
-2013-10-09	13:22	LA	Book	23.86	Visa
