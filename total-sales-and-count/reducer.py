@@ -12,15 +12,8 @@ for line in sys.stdin:
         continue
 
     thisKey, thisSale = data
-    if oldKey and oldKey != thisKey:
-        print oldKey, "\t", salesTotal, "\t", salesCount
-        oldKey = thisKey
-        salesTotal = 0
-        salesCount = 0
-
-    oldKey = thisKey
+    
     salesTotal += float(thisSale)
     salesCount += 1
 
-if oldKey != None:
-    print oldKey, "\t", salesTotal, "\t", salesCount
+print "Total", "\t", salesTotal, "\t", salesCount
