@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import sys
 
 max_sale = 0
