@@ -1,23 +1,21 @@
 #!/usr/bin/python
 import sys
-old_url = None
-hit_count = 0
+import operator
 
-
+d = {}
 for line in sys.stdin:
     data = line.strip().split("\t")
     if len(data) != 2:
         # Something has gone wrong. Skip this line.
         continue
     
-    url, hit = data
-    if old_url and old_url != url:
-        print old_url, "\t", hit_count
-        old_url = url
-        hit_count = 0
+    path, hit = data
 
-    old_url = url
-    hit_count += +1
+    if path in d:
+      d[path] += 1
+    else:
+      d[path] = 1
 
-if old_url != None:
-    print old_url, "\t", hit_count
+popular_path = max(d.iteritems(), key=operator.itemgetter(1))
+
+print "{0}\t{1}".format(popular_path[0], popular_path[1])
