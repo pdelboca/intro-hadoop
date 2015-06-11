@@ -16,6 +16,7 @@ for line in sys.stdin:
         continue
 
     client, identuser, authuser, date, time, tz, method, url, protocol, status, num_bytes = m.groups()
-    path = path_reg.findall(url)[0]
+    # path = path_reg.findall(url)[0]
+    path = url.replace('http://www.the-associates.co.uk', '')
     
     print "{0}\t{1}".format(path, 1)
