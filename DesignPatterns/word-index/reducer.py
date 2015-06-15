@@ -1,26 +1,29 @@
 #!/usr/bin/python
-import csv
-import sys
- 
-old_word = None
-current_count = 0
-node_list = []
- 
-reader = csv.reader(sys.stdin, delimiter='\t')
- 
-for line in reader:
-    
-    word, count, node = line
+# fantastically count 17583,1007765,1025821,7004477,9006895
+# # fantastic appear in 345
 
-    if old_word and old_word != word:
-        print "{0}\t{1}\t{2}".format(old_word, current_count, node_list)
-        current_count = 0
-        node_list = []
- 
-    old_word = word
-    current_count += 1
-    if node not in node_list:            
-        node_list.append(node)
- 
-if old_word:
-    print "{0}\t{1}\t{2}".format(old_word, current_count, node_list)
+import sys
+
+nodeIds=""
+oldKey = None
+
+#combine question ids for each words
+
+for line in sys.stdin:
+    data_mapped = line.strip().split("\t")
+    if len(data_mapped) != 2:
+        # Something has gone wrong. Skip this line.
+        continue
+
+    thisKey, nodeId= data_mapped
+
+    if oldKey and oldKey != thisKey:
+        print oldKey, "\t", nodeIds
+        oldKey = thisKey
+        nodeIds = ""
+
+    oldKey = thisKey
+    nodeIds += nodeId+","
+
+if oldKey != None:
+    print oldKey, "\t", nodeIds
