@@ -196,5 +196,7 @@ for line in reader:
     
     for word in words:
         #print only strings containing letters        
-        if word.isalpha() and word not in stop_words and len(word) > 1:
+#        if word.isalpha() and word not in stop_words and len(word) > 1:
+#            print '{0}\t{1}\t{2}'.format(word,1,node)
+        if word == "fantastic":
             print '{0}\t{1}\t{2}'.format(word,1,node)
