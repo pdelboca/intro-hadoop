@@ -26,4 +26,4 @@ for line in reader:
     total_sales += float(sales)
     
 if old_weekday:
-    print "{0}\t{1}".format(old_weekday, total_sales)
+    print "{0}\t{1}".format(old_weekday, total_sales/day_counts)
