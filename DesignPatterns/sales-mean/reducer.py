@@ -4,25 +4,23 @@
 import csv
 import sys
  
-old_word = None
-current_count = 0
-node_list = []
+old_weekday = None
+total_sales = 0
+
  
 reader = csv.reader(sys.stdin, delimiter='\t')
  
 for line in reader:
     
-    word, count, node = line
+    weekday, sales = line
 
-    if old_word and old_word != word:
-        print "{0}\t{1}\t{2}".format(old_word, current_count, node_list)
-        current_count = 0
-        node_list = []
+    if old_weekday and old_weekday != weekday:
+        print "{0}\t{1}\t{2}".format(old_weekday, total_sales)
+        total_sales = 0
+        
  
-    old_word = word
-    current_count += 1
-    if node not in node_list:            
-        node_list.append(node)
- 
-if old_word:
-    print "{0}\t{1}\t{2}".format(old_word, current_count, node_list)
+    old_weekday = weekday
+    total_sales += float(sales)
+    
+if old_weekday:
+    print "{0}\t{1}".format(old_weekday, total_sales)
